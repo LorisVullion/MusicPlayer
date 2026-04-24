@@ -11,23 +11,19 @@
         android:id="@+id/seekBar"
         android:layout_width="387dp"
         android:layout_height="31dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/shuffle_switch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347" />
+        />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="275dp"
+        android:layout_height="390dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.966"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466"
+        app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/bizarre" />
 
     <ImageButton
@@ -35,33 +31,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/pause_button"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/pause_button"
+        app:layout_constraintTop_toBottomOf="@+id/shuffle_switch"
         app:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageButton
         android:id="@+id/pause_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/stop_button"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813"
+        app:layout_constraintTop_toBottomOf="@+id/shuffle_switch"
+        app:layout_constraintRight_toLeftOf="@+id/stop_button"
+        app:layout_constraintLeft_toRightOf="@+id/play_button"
         app:srcCompat="@android:drawable/ic_media_pause" />
 
     <ImageButton
         android:id="@+id/stop_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="348dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813"
+        app:layout_constraintRight_toLeftOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/shuffle_switch"
+        app:layout_constraintLeft_toRightOf="@+id/pause_button"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
 
     <Switch
@@ -69,6 +61,8 @@
         android:layout_width="106dp"
         android:layout_height="31dp"
         android:text="Shuffle"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="202dp" />
+        app:layout_constraintRight_toLeftOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/pause_button"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
